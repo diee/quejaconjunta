@@ -208,13 +208,13 @@ a.boxclose{
 	background:url(../images/facebookh.png) no-repeat 0px 0px;
 }
 .rateit span{
-	height:18px;
+	height:28px;
 	width:76px;
-	background:url(../images/start-rate.png) no-repeat 0px 0px; 
+	background:url(../images/quejaiconlike.png) no-repeat 0px 0px; 
 	display:inline-block;
 }
 .rateit span:hover{
-	background:url(../images/start-rateh.png) no-repeat 0px 0px; 
+	background:url(../images/upquejaiconlike.png) no-repeat 0px 0px; 
 }
 .post-basic-info{
 	padding: 7% 7% 5% 7%;
