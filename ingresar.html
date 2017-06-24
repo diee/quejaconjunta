@@ -7,7 +7,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>QuejaConjunta | Denuncia</title>
+		<title>QuejaConjunta | Ingresar</title>
+		<meta charset="UTF-8">
 		<link href="css/style.css" rel='stylesheet' type='text/css' />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" type="image/x-icon" href="images/fav-icon.png" />
@@ -48,7 +49,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="header">
 				<div class="wrap">
 				<div class="logo">
-					<a href="index.html"><img src="images/quejaconjuntalogo.jpg" title="quejaconjunta" /></a>
+					<a href="index.html"><img src="images/quejaconjuntalogo.jpg" title="pinbal" /></a>
 				</div>
 				<div class="nav-icon">
 					 <a href="#" class="right_bt" id="activator"><span> </span> </a>
@@ -59,9 +60,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						 	<div class="form_content">
 								<div class="menu_box_list">
 									<ul>
-										<li><a href="index.html"><span>Inicio</span></a></li>
+										<ul>
 										<li><a href="mapa.html"><span>Mapa</span></a></li>
 										<li><a href="denuncia.html"><span>Denuncia</span></a></li>
+										<li><a href="#"><span>Acerca de..</span></a></li> 
 										<div class="clear"> </div>
 									</ul>
 								</div>
@@ -70,15 +72,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</div> 	
 					</div> 
 				</div>       	  
-				<!--<div class="top-searchbar">
-					<form>
-						<input type="text" /><input type="submit" value="" />
-					</form>
-				</div>-->
 				<div class="userinfo">
 					<div class="user">
 						<ul>
-							<li><a href="ingresar.html"><img src="images/user-pic.png" title="user-name" /><span>Cerrar Sesión</span></a></li>
+							<li><a href="#"><img src="images/user-pic.png" title="user-name" /><span>Ipsum</span></a></li>
 						</ul>
 					</div>
 				</div>
@@ -90,48 +87,40 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="content">
 			<div class="wrap">
 				<div class="contact-info">
-				<h1>CREA TU DENUNCIA</h1>
-				<div class="contact-grids">
-							 <div class="col_1_of_bottom span_1_of_first1">
-								    <h5>Seleccione un tipo</h5>
-								    <ul class="list3">
-										<li>
-											<select>
-											  <option value="volvo">Bache</option>
-											  <option value="saab">Semáforo Roto</option>
-											  <option value="mercedes">Semáforo no Funciona</option>
-											  <option value="audi">Rampa Rota</option>
-											  <option value="audi">Rampa Obstruida</option>
-											  <option value="audi">Calle Obstruida</option>
-											  <option value="audi">Caño de Agua Roto</option>
-											</select>
-											 <p></p>
-										</li>
-									</ul>
-							    </div>
-							    <div class="col_1_of_bottom span_1_of_first1">
-								    <h5>Subir Fotos</h5>
-								    <ul class="list3">
-										<li>
-											<form action="/action_page.php">
-											  <input type="file" name="img" multiple>
-											</form>
-										</li>
-									</ul>
-							    </div>
-						
-								<div class="clear"></div>
-							 </div>
-							 <form method="post" action="contact-post.html">
+					 <div class="contact-grids">
+							 <h5>Crear Usuario</h5>
+							 	<form method="post" action="contact-post.html">
 							          <div class="contact-form">
-										<div class="text2b">
-						                   <textarea value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Descripción..</textarea>
-						                </div>
-						                <div class="map">
-						                <h5>Ubique la falla en el Mapa</h5>
-					 	<iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJvQz5TjvKvJURh47oiC6Bs6A&key=AIzaSyADeuOYKpDAf0AQmUqwST0I4MoYkNAyj0A"></iframe><br><small><a href="https://maps.google.co.in/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Lighthouse+Point,+FL,+United+States&amp;aq=4&amp;oq=light&amp;sll=26.275636,-80.087265&amp;sspn=0.04941,0.104628&amp;ie=UTF8&amp;hq=&amp;hnear=Lighthouse+Point,+Broward,+Florida,+United+States&amp;t=m&amp;z=14&amp;ll=26.275636,-80.087265" style="color:#666;text-align:left;font-size:12px"></a></small>
-					 </div>
-						               <span><input type="submit" class="" value="Denunciar"></span>
+										<div class="form-group">
+					                     	<input type="text" class="text" value="Nombre..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email...';}">
+										</div>
+										<div class="form-group">
+					                     	<input type="text" class="text" value="Apellido..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Contraseña...';}">
+										</div>
+										<div class="form-group">
+					                     	<input type="text" class="text" value="DNI..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Contraseña...';}">
+										</div>
+										<div class="form-group">
+					                     	<select style="font-size: 18px; width: 318px">
+											  <option value="volvo">BARRIO</option>
+											  <option value="saab">Almagro</option>
+											  <option value="mercedes">Balvanera</option>
+											  <option value="audi">Barracas</option>
+											  <option value="audi">Belgrano</option>
+											  <option value="audi">Boedo</option>
+											  <option value="audi">Caballito</option>
+											  <option value="audi">Chacarita</option>
+											  <option value="audi">Colegiales</option>
+											  <option value="audi">Flores</option>
+											</select>
+										</div>
+										<div class="form-group">
+					                     	<input type="text" class="text" value="Email..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Contraseña...';}">
+										</div>
+										<div class="form-group">
+					                     	<input type="text" class="text" value="Contraseña..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Contraseña...';}">
+										</div>
+						               <span><input type="submit" class="" value="Crear Usuario"></span>
 						                <div class="clear"></div>
 						               </div>
 						           </form>
@@ -139,6 +128,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>
 		</div>
 		<!----start-footer--->
+		<div class="footer">
+			<p>Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+		</div>
 		<!----//End-footer--->
 		<!---//End-wrap---->
 	</body>
