@@ -39,6 +39,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				});
 									
 			});
+   function initGeolocation() {
+ if (navigator && navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
+        } else {
+            console.log('Geolocation is not supported');
+        }
+}
+ 
+function errorCallback() {}
+ 
+function successCallback(position) {
+      var mapUrl = "http://maps.google.com/maps/api/staticmap?center=";
+      mapUrl = mapUrl + position.coords.latitude + ',' + position.coords.longitude;
+      mapUrl = mapUrl + '&zoom=15&size=512x512&maptype=roadmap&sensor=false';
+      var imgElement = document.getElementById("static-map");
+      imgElement.src = mapUrl;
+    }
 		</script>
         <!----//End-dropdown--->
 	</head>
@@ -122,7 +139,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						
 								<div class="clear"></div>
 							 </div>
-							 <form method="post" action="contact-post.html">
+							 <form method="post" action="index.html">
 							          <div class="contact-form">
 										<div class="text2b">
 						                   <textarea value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Descripción..</textarea>
@@ -135,6 +152,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						                <div class="clear"></div>
 						               </div>
 						           </form>
+
+<div id="map">
+  <img id="static-map" src="placeholder.png" />
+</div>
 								</div>
 			</div>
 		</div>
