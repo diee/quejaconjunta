@@ -13,6 +13,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<link rel="shortcut icon" type="image/x-icon" href="images/fav-icon.png" />
 		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 		</script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOZ6ACDGN6A2a1bVgDiR-N_KuxrADicS0"></script>
 		<!----webfonts---->
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 		<!----//webfonts---->
@@ -40,6 +41,42 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									
 			});
 		</script>
+		<script type="text/javascript">
+    jQuery(function ($) {
+        function init_map1() {
+            var myLocation = new google.maps.LatLng(38.885516, -77.09327200000001);
+            var mapOptions = {
+                center: myLocation,
+                zoom: 16
+            };
+            var marker = new google.maps.Marker({
+                position: myLocation,
+                title: "Property Location"
+            });
+            var map = new google.maps.Map(document.getElementById("map1"),
+                mapOptions);
+            marker.setMap(map);
+        }
+        init_map1();
+    });
+</script>
+
+<style>
+    .map {
+        min-width: 300px;
+        min-height: 300px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .header {
+        background-color: #F5F5F5;
+        color: #36A0FF;
+        height: 70px;
+        font-size: 27px;
+        padding: 10px;
+    }
+</style>
         <!----//End-dropdown--->
 	</head>
 	<body>
@@ -113,7 +150,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								    <h5>Subir Fotos</h5>
 								    <ul class="list3">
 										<li>
-											<form action="/index.html">
+											<form action="/action_page.php">
 											  <input type="file" name="img" multiple>
 											</form>
 										</li>
@@ -122,53 +159,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						
 								<div class="clear"></div>
 							 </div>
-							
-						           
+							 <form method="post" action="index.html">
+							          <div class="contact-form">
+										<div class="text2b">
+						                   <textarea value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Descripción..</textarea>
+						                </div>
+						                </form>
+						                
+						                <h5>Ubicación de la falla</h5>
+					 					<div id="map1" class="map">
+						               <span><input type="submit" class="" value="Denunciar"></span>
+						                <div class="clear"></div>
+						               </div>
 
-
-<button onclick="getLocation()">Try It</button>
-
-<div id="mapholder"></div>
-
-<script>
-var x = document.getElementById("demo");
-
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition, showError);
-    } else {
-        x.innerHTML = "Geolocation is not supported by this browser.";
-    }
-}
-
-function showPosition(position) {
-    var latlon = position.coords.latitude + "," + position.coords.longitude;
-
-    var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="
-    +latlon+"&zoom=14&size=400x300&sensor=false&key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU";
-    document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
-}
-//To use this code on your website, get a free API key from Google.
-//Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
-
-function showError(error) {
-    switch(error.code) {
-        case error.PERMISSION_DENIED:
-            x.innerHTML = "User denied the request for Geolocation."
-            break;
-        case error.POSITION_UNAVAILABLE:
-            x.innerHTML = "Location information is unavailable."
-            break;
-        case error.TIMEOUT:
-            x.innerHTML = "The request to get user location timed out."
-            break;
-        case error.UNKNOWN_ERROR:
-            x.innerHTML = "An unknown error occurred."
-            break;
-    }
-    alert("Error: " + x.innerHTML);
-}
-</script>
 								</div>
 			</div>
 		</div>
