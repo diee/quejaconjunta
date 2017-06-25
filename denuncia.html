@@ -13,7 +13,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<link rel="shortcut icon" type="image/x-icon" href="images/fav-icon.png" />
 		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 		</script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOZ6ACDGN6A2a1bVgDiR-N_KuxrADicS0"></script>
 		<!----webfonts---->
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 		<!----//webfonts---->
@@ -41,42 +40,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									
 			});
 		</script>
-		<script type="text/javascript">
-    jQuery(function ($) {
-        function init_map1() {
-            var myLocation = new google.maps.LatLng(38.885516, -77.09327200000001);
-            var mapOptions = {
-                center: myLocation,
-                zoom: 16
-            };
-            var marker = new google.maps.Marker({
-                position: myLocation,
-                title: "Property Location"
-            });
-            var map = new google.maps.Map(document.getElementById("map1"),
-                mapOptions);
-            marker.setMap(map);
-        }
-        init_map1();
-    });
-</script>
-
-<style>
-    .map {
-        min-width: 300px;
-        min-height: 300px;
-        width: 100%;
-        height: 100%;
-    }
-
-    .header {
-        background-color: #F5F5F5;
-        color: #36A0FF;
-        height: 70px;
-        font-size: 27px;
-        padding: 10px;
-    }
-</style>
         <!----//End-dropdown--->
 	</head>
 	<body>
@@ -167,7 +130,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						                </form>
 						                
 						                <h5>Ubicación de la falla</h5>
-					 					<div id="map1" class="map">
+					 					<iframe
+										  width="100%"
+										  height="450"
+										  frameborder="0" style="border:0"
+										  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC666L_MBnJbphZ_iq3OY4g67Vk_-T-zQk
+										    &q=Universidad+de+Palermo" allowfullscreen>
+										</iframe>
 						               <span><input type="submit" class="" value="Denunciar"></span>
 						                <div class="clear"></div>
 						               </div>
